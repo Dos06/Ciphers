@@ -19,18 +19,22 @@
     <header id="header"></header>
 
     <div class="col-md-8 offset-2 mt-5">
-        <h1 class="text-center my-4">Base64</h1>
+        <h1 class="text-center my-4">Book Cipher</h1>
         <div class="row col-md-12">
             <div class="col-md-6">
                 <h2 class="text-center my-4">Encrypt</h2>
                 <form id="form">
                     <div class="form-group">
                         <h4 class="text-center">Text:</h4>
-                        <textarea type="text" id="text" class="form-control" rows="3"></textarea>
+                        <textarea type="text" id="text" class="form-control" rows="3" style="text-transform: uppercase;"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <h4 class="text-center">Key:</h4>
+                        <input type="text" id="key" class="form-control" value="abcdefghijklmnopqrstuvwxyz.?!, " style="text-transform: uppercase;">
                     </div>
                     <div class="form-group mt-5">
                         <h4 class="text-center">Result:</h4>
-                        <textarea disabled type="text" id="result" class="form-control" rows="3"></textarea>
+                        <textarea disabled type="text" id="result" class="form-control" rows="3" style="text-transform: uppercase;"></textarea>
                     </div>
                 </form>
             </div>
@@ -41,11 +45,15 @@
                 <form id="form">
                     <div class="form-group">
                         <h4 class="text-center">Text:</h4>
-                        <textarea type="text" id="textDecrypt" class="form-control" rows="3"></textarea>
+                        <textarea type="text" id="textDecrypt" class="form-control" rows="3" style="text-transform: uppercase;"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <h4 class="text-center">Key:</h4>
+                        <input type="text" id="keyDecrypt" class="form-control" value="abcdefghijklmnopqrstuvwxyz.?!, " style="text-transform: uppercase;">
                     </div>
                     <div class="form-group mt-5">
                         <h4 class="text-center">Result:</h4>
-                        <textarea disabled type="text" id="resultDecrypt" class="form-control" rows="3"></textarea>
+                        <textarea disabled type="text" id="resultDecrypt" class="form-control" rows="3" style="text-transform: uppercase;"></textarea>
                     </div>
                 </form>
             </div>
@@ -53,6 +61,6 @@
         </div>
     </div>
 
-    <script src="/js/base64.js"></script>
+    <script src="/js/book.js"></script>
 </body>
 </html>
