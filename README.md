@@ -5,6 +5,6 @@
 - Playfair Cipher
 - Transposition Cipher
 - Base64 Encoding
-- 
+- Book Cipher
 
 <img src="img/example-screenshot.png">
