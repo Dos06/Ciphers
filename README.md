@@ -6,5 +6,6 @@
 - Transposition Cipher
 - Base64 Encoding
 - Book Cipher
+- AES Cipher
 
 <img src="img/example-screenshot.png">
