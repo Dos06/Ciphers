@@ -181,50 +181,10 @@ function totient(n) {
 }
 
 
-function mixColumns(s, Nb) {
-    for (let c = 0; c < Nb; c++) {
-        const a = new Array(Nb);
-        const b = new Array(Nb);
-        for (let r = 0; r < 4; r++) {
-            a[r] = s[r][c];
-            b[r] = s[r][c] & 0x80 ? s[r][c] << 1 ^ 0x011b : s[r][c] << 1;
-        }
-        s[0][c] = b[0] ^ a[1] ^ b[1] ^ a[2] ^ a[3];
-        s[1][c] = a[0] ^ b[1] ^ a[2] ^ b[2] ^ a[3];
-        s[2][c] = a[0] ^ a[1] ^ b[2] ^ a[3] ^ b[3];
-        s[3][c] = a[0] ^ b[0] ^ a[1] ^ a[2] ^ b[3];
-    }
-    return s;
-}
-
-
-function xorAddRoundKey(state, word, rnd, Nb) {
-    for (let r = 0; r < 4; r++) {
-        for (let c = 0; c < Nb; c++) state[r][c] ^= word[rnd * 4 + c][r];
-    }
-    return state;
-}
-
-
-function subWordSBox(word) {
-    for (let i = 0; i < 4; i++) word[i] = sBox[word[i]];
-    return word;
-}
-
-
-function rotateWord(word) {
-    const tmp = w[0];
-    for (let i = 0; i < 3; i++) word[i] = word[i + 1];
-    word[3] = tmp;
-    return word;
-}
-
 
 $(document).ready(function() {
     let text = document.getElementById('text');
     let textDecrypt = document.getElementById('textDecrypt');
-    // let key = document.getElementById('key');
-    // let keyDecrypt = document.getElementById('keyDecrypt');
 
     $('#text').keypress(function() {
         setTimeout(function() { rsa(text.value, false); }, 20);

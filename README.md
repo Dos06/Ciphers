@@ -7,5 +7,6 @@
 - Base64 Encoding
 - Book Cipher
 - AES Cipher
+- RSA Cipher
 
 <img src="img/example-screenshot.png">
