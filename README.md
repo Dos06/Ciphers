@@ -8,5 +8,6 @@
 - Book Cipher
 - AES Cipher
 - RSA Cipher
+- Diffie-Hellman
 
 <img src="img/example-screenshot.png">

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diffie-Hellman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script>
+        $(function(){
+            $("#header").load("components/header.html");
+        });
+    </script>
+</head>
+<body>
+    <header id="header"></header>
+
+    <div class="col-md-10 offset-1 mt-5">
+        <h1 class="text-center my-4">
+            Diffie-Hellman
+            <br>
+            <span class="h3">For 3 people</span>
+        </h1>
+        <div class="row col-md-12">
+            <div class="col-md-4">
+                <h2 class="text-center my-4">Encrypt</h2>
+                <form>
+                    <div class="form-group">
+                        <h4 class="text-center">Private Key:</h4>
+                        <input type="number" id="text" class="form-control">
+                    </div>
+                    <div class="row m-0 justify-content-between">
+                        <div class="form-group">
+                            <h4 class="text-center">1st Key (P):</h4>
+                            <input type="number" id="key1" class="form-control" value="3">
+                        </div>
+                        <div class="form-group">
+                            <h4 class="text-center">2nd Key (Q):</h4>
+                            <input type="number" id="key2" class="form-control" value="17">
+                        </div>
+                    </div>
+                    <div class="form-group mt-4">
+                        <h4 class="text-center">Result:</h4>
+                        <input disabled type="number" id="result" class="form-control">
+                    </div>
+                </form>
+            </div>
+            
+            
+            <div class="col-md-4">
+                <h2 class="text-center my-4">Decrypt Step 1</h2>
+                <form>
+                    <div class="form-group">
+                        <h4 class="text-center">Shared Key:</h4>
+                        <input type="number" id="textDecrypt" class="form-control">
+                    </div>
+                    <div class="form-group mt-3">
+                        <h4 class="text-center">Result:</h4>
+                        <input disabled type="number" id="resultDecrypt1" class="form-control">
+                    </div>
+                </form>
+            </div>
+            
+            
+            <div class="col-md-4">
+                <h2 class="text-center my-4">Decrypt Step 2</h2>
+                <form>
+                    <div class="form-group">
+                        <h4 class="text-center">Shared Key:</h4>
+                        <input type="number" id="partnerKey" class="form-control">
+                    </div>
+                    <div class="form-group mt-3">
+                        <h4 class="text-center">Result:</h4>
+                        <input disabled type="number" id="resultDecrypt2" class="form-control">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/js/diffie-hellman.js"></script>
+</body>
+</html>
